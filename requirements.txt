@@ -2,3 +2,4 @@ flask
 geopy
 requests
 Jinja2
+unittest

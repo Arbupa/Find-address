@@ -5,6 +5,6 @@ error_bp = Blueprint('error_bp', __name__)
 
 
 # @error_bp.route('/')
-@error_bp.route('not_found')
+@error_bp.route('/not_found')
 def not_found():
-    return {"Error": "AAAAAH"}
+    return {"Error": "not found"}

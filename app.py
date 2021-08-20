@@ -1,8 +1,6 @@
 from blueprints.routes import api_route
 from blueprints.errorbp import error_bp
 from flask import Flask
-# from sys import path
-# path.append("./")
 
 
 app = Flask(__name__)

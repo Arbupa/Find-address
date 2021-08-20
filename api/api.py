@@ -1,6 +1,7 @@
 import requests
 from geopy.units import radians
-from api.address import Address
+# I've changed this line
+from .address import Address
 
 
 # function to search the given address
@@ -43,9 +44,3 @@ def search_address(address: str) -> list:
         except:
             return ["There was an error. Send the request again."]
     return arr
-
-# result = search_address(false)
-# print(search_address(false))
-# print(len(result))
-# for elem in result:
-#     print(elem)

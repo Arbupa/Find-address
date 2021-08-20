@@ -1,6 +1,8 @@
 from geopy import distance
 
 
+# Uses Geopy library that has the most accurate function to calculate distance between two points (uses WGS-84 ellipsoid).
+# function to calculate the distance from MKAD to the address from tha received longitude and latitude.
 def find_distance(lon: str, lat: str):
     # parse to float
     lon = float(lon)
@@ -118,11 +120,13 @@ def find_distance(lon: str, lat: str):
         [108, 37.841576, 55.785017]
     ]
 
+    # looping through the list of coordinates inside MKAD
     for elem in mkad_km:
         # first check if the coordinates are inside the array from different locations inside
         # the Moscow ring road, then compares the latitude and longitude received that may not be appear
         # in the array but it can be inside the location on map.
-        # Basically I added this range because Wikipedia says that the distance from
+        # Basically I added this range to do it a little bit more precise.
+        # I've found those distances as limits for MKAD.
         if ((elem[1] == lon and elem[2] == lat) or ((lon >= 37.329 and lon <= 37.895) and (lat >= 55.503 and lon <= 55.917))):
             return "Inside"
 
@@ -130,8 +134,5 @@ def find_distance(lon: str, lat: str):
     coords_1 = (55.710000, 37.612000)
     coords_2 = (lat, lon)
 
+    # return a number of type float with the distance in kilometers.
     return distance.distance(coords_1, coords_2).kilometers
-
-
-# lon, lat from api
-print(find_distance("-102.277714", "23.530679"))

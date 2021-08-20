@@ -7,4 +7,4 @@ WORKDIR /app
 # Install libraries/frameworks needed. 
 RUN pip install -r requirements.txt
 # Command to run the Flask app.
-CMD python app.py
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]

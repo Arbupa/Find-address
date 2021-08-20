@@ -1,12 +1,15 @@
+from blueprints.routes import api_route
+from blueprints.errorbp import error_bp
 from flask import Flask
+# from sys import path
+# path.append("./")
+
 
 app = Flask(__name__)
-
-
-@app.route('/')
-def ping_server():
-    return "Welcome to the world of animals."
+app.register_blueprint(error_bp, url_prefix='/error')
+app.register_blueprint(api_route)
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
+    print(app.url_map)
+    app.run(debug=True, host="0.0.0.0", port=5000)

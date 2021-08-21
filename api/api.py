@@ -42,5 +42,6 @@ def search_address(address: str) -> list:
             return arr
 
         except:
+            print(["There was an error. Send the request again."])
             return ["There was an error. Send the request again."]
     return arr

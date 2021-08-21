@@ -128,11 +128,14 @@ def find_distance(lon: str, lat: str):
         # Basically I added this range to do it a little bit more precise.
         # I've found those distances as limits for MKAD.
         if ((elem[1] == lon and elem[2] == lat) or ((lon >= 37.329 and lon <= 37.895) and (lat >= 55.503 and lon <= 55.917))):
+            print("Inside")
             return "Inside"
 
     #           lat        lon
     coords_1 = (55.710000, 37.612000)
     coords_2 = (lat, lon)
 
+    print("The distance in km is: ",  distance.distance(
+        coords_1, coords_2).kilometers)
     # return a number of type float with the distance in kilometers.
     return distance.distance(coords_1, coords_2).kilometers

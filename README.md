@@ -2,7 +2,12 @@
 
 ## Instructions
 
-To execute the program is only needed Docker. Just clone the repo or download the code and execute the docker command: _**docker-compose up**_ (inside the folder where docker files are) to install all the dependencies and execute the flask server app.
+To execute the program is only needed Docker. Just clone the repo or download the code and execute the docker commands: 
+```
+docker-compose build
+docker-compose up 
+```
+(inside the folder where docker files are) to install all the dependencies and execute the flask server app.
 
 ## Endpoints
 

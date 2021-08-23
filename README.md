@@ -7,7 +7,7 @@ To execute the program is only needed Docker. Just clone the repo or download th
 ## Endpoints
 
 - _**[GET]**_ http://localhost:5000/
-- _**[GET]**_ http://localhost:5000/_placeToSearchDistance_
+- _**[GET]**_ http://localhost:5000/placeToSearchDistance
 
 ## URL Examples
 

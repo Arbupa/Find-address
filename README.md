@@ -24,6 +24,6 @@ The logic behind the app is simple, I use the api [Yandex Geocoder API ](https:/
 Using the "ellipsoidal model of the earth to use by specifying an ellipsoid keyword argument. The default is ‘WGS-84’, which is the most globally accurate model.".
 Also to make it a little bit more accurate I added some conditionals inside _**distance file**_ putting the limits of the coordinates for **Moscow Ring Road** that I found and comparing the coordinates (longitude and latitude) received to that limits.
 
-Inside the _**api file**_ there is a part where there are some try and catch nested, the first one is to check if the response have no result but was successful (status code 200) then enters to the next one which is the one who process data response and creates the object with the info to add it to a list and return that list.
+Inside the _**api file**_ there is a part where there are some _**try and catch nested**__, the first one is to check if the response have no result but was successful (status code 200) then enters to the next one which is the one who process data response and creates the object with the info to add it to a list and return that list.
 
 Finally, inside _**routes file**_ we have conditionals to handle every posible response from api, catching many possible errors and processing data if is it possible, otherwise returning a message error.
